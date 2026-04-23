@@ -288,6 +288,26 @@ body {
   max-width: 360px;
 }
 
+.btn-ghost {
+  background: none;
+  border: none;
+  color: var(--text-bg);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: normal;
+  padding: var(--sp-12) var(--sp-24);
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.btn-ghost:hover {
+  transform: scale(1.02);
+}
+
+.btn-ghost:active {
+  transform: scale(0.98);
+}
+
 .btn-small-inline {
   display: inline-flex;
   align-items: center;
