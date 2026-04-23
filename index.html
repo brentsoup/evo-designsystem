@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evo Design System</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@700;800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <a href="#" class="nav-logo">
+          <svg class="nav-logo-icon" width="20" height="20" viewBox="0 0 32 32" fill="none">
+            <rect width="32" height="32" rx="8" fill="#ff381a"/>
+            <path d="M8 22V10h4.5c1.2 0 2.1.3 2.7.9.6.6.9 1.3.9 2.2 0 .6-.2 1.1-.5 1.6-.3.4-.8.7-1.4.9l2.2 6.4h-2.8l-1.8-5.8H10.6V22H8zm2.6-7.8h1.6c.5 0 .9-.1 1.2-.4.3-.3.4-.6.4-1s-.1-.7-.4-1c-.3-.2-.7-.4-1.2-.4h-1.6v2.8zM19 22V10h7v2.2h-4.4v2.8h3.8v2.2h-3.8v2.6H26V22h-7z" fill="white"/>
+          </svg>
+          <span>DESIGN.md</span>
+        </a>
+        <div class="nav-divider"></div>
+        <div class="nav-links">
+          <a href="#hero" class="nav-link active">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4h12M2 8h12M2 12h8"/></svg>
+            overview
+          </a>
+          <a href="#colors" class="nav-link">Colors</a>
+          <a href="#typography" class="nav-link">Typography</a>
+          <a href="#buttons" class="nav-link">Buttons</a>
+          <a href="#cards" class="nav-link">Cards</a>
+          <a href="#forms" class="nav-link">Forms</a>
+          <a href="#spacing" class="nav-link">Spacing</a>
+        </div>
+      </div>
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        </button>
+        <a href="#" class="btn btn-accent btn-sm">Grade a Card</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <h1 class="hero-title">Evo Design<br/>System</h1>
+    <p class="hero-subtitle">A design token catalog generated from DESIGN.md. Every color,<br/>font, component, and spacing value — visualized.</p>
+    <div class="hero-actions">
+      <a href="#" class="btn btn-primary">Start Exploring</a>
+      <a href="#" class="btn btn-secondary">View Documentation</a>
+    </div>
+  </section>
+
+  <main class="main">
+    <!-- Colors -->
+    <section id="colors" class="section">
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <span class="section-divider">|</span>
+        <span class="section-label">Colors</span>
+      </div>
+      <h2 class="section-title">Color Palette</h2>
+
+      <div class="color-group">
+        <h3 class="color-group-title">Primary</h3>
+        <div class="color-grid">
+          <div class="color-card">
+            <div class="color-swatch" style="background:#07001a"></div>
+            <div class="color-info">
+              <span class="color-name">Evo Ink</span>
+              <span class="color-hex">#07001a</span>
+              <span class="color-role">Primary text, headings</span>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background:#f8f7f6"></div>
+            <div class="color-info">
+              <span class="color-name">Off-White</span>
+              <span class="color-hex">#f8f7f6</span>
+              <span class="color-role">Page background</span>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background:#ffffff"></div>
+            <div class="color-info">
+              <span class="color-name">Card White</span>
+              <span class="color-hex">#ffffff</span>
+              <span class="color-role">Card surfaces, elevated containers</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="color-group">
+        <h3 class="color-group-title">Accent</h3>
+        <div class="color-grid color-grid-1">
+          <div class="color-card">
+            <div class="color-swatch" style="background:#ff381a"></div>
+            <div class="color-info">
+              <span class="color-name">Evo Red</span>
+              <span class="color-hex">#ff381a</span>
+              <span class="color-role">CTAs, floating actions, hero backgrounds</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="color-group">
+        <h3 class="color-group-title">Semantic</h3>
+        <div class="color-grid color-grid-4">
+          <div class="color-card">
+            <div class="color-swatch" style="background:#44b200"></div>
+            <div class="color-info">
+              <span class="color-name">Profit Green</span>
+              <span class="color-hex">#44b200</span>
+              <span class="color-role">Positive values, gains</span>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background:#ee0053"></div>
+            <div class="color-info">
+              <span class="color-name">Loss Pink</span>
+              <span class="color-hex">#ee0053</span>
+              <span class="color-role">Negative values, losses</span>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background:#0972f1"></div>
+            <div class="color-info">
+              <span class="color-name">Info Blue</span>
+              <span class="color-hex">#0972f1</span>
+              <span class="color-role">Informational, links</span>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background:#f39600"></div>
+            <div class="color-info">
+              <span class="color-name">Medium Confidence</span>
+              <span class="color-hex">#f39600</span>
+              <span class="color-role">Warning, moderate confidence</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="color-group">
+        <h3 class="color-group-title">Text Hierarchy</h3>
+        <div class="color-grid color-grid-5">
+          <div class="color-card">
+            <div class="color-swatch" style="background:#07001a"></div>
+            <div class="color-info">
+              <span class="color-name">Text Primary</span>
+              <span class="color-hex">#07001a</span>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background:#68616b"></div>
+            <div class="color-info">
+              <span class="color-name">Subtext</span>
+              <span class="color-hex">#68616b</span>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background:#b3afb6"></div>
+            <div class="color-info">
+              <span class="color-name">Subsubtext</span>
+              <span class="color-hex">#b3afb6</span>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background:#e2e2e2"></div>
+            <div class="color-info">
+              <span class="color-name">Subsubsubtext</span>
+              <span class="color-hex">#e2e2e2</span>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background:#635d67"></div>
+            <div class="color-info">
+              <span class="color-name">Darker Subtext</span>
+              <span class="color-hex">#635d67</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="color-group">
+        <h3 class="color-group-title">Dark Mode Surfaces</h3>
+        <div class="color-grid">
+          <div class="color-card">
+            <div class="color-swatch" style="background:#18171c"></div>
+            <div class="color-info">
+              <span class="color-name">Dark Bg</span>
+              <span class="color-hex">#18171c</span>
+              <span class="color-role">Dark mode page background</span>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background:#23222a"></div>
+            <div class="color-info">
+              <span class="color-name">Dark Card</span>
+              <span class="color-hex">#23222a</span>
+              <span class="color-role">Dark mode card surface</span>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch" style="background:#efeeee"></div>
+            <div class="color-info">
+              <span class="color-name">Close Button</span>
+              <span class="color-hex">#efeeee</span>
+              <span class="color-role">Dismiss button bg</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Typography -->
+    <section id="typography" class="section">
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <span class="section-divider">|</span>
+        <span class="section-label">Typography</span>
+      </div>
+      <h2 class="section-title">Typography Scale</h2>
+
+      <div class="type-specimens">
+        <div class="type-specimen">
+          <h3 class="type-hero">$348.67</h3>
+          <div class="type-meta">
+            <span>Hero / H1</span>
+            <span class="dot">&middot;</span><span>Figtree</span>
+            <span class="dot">&middot;</span><span>900</span>
+            <span class="dot">&middot;</span><span>32px</span>
+            <span class="dot">&middot;</span><span>1.5</span>
+            <span class="dot">&middot;</span><span>-2%</span>
+          </div>
+        </div>
+
+        <div class="type-specimen">
+          <h3 class="type-h2">Invite 3 friends to Evo</h3>
+          <div class="type-meta">
+            <span>Section Title / H2</span>
+            <span class="dot">&middot;</span><span>Figtree</span>
+            <span class="dot">&middot;</span><span>900</span>
+            <span class="dot">&middot;</span><span>24px</span>
+            <span class="dot">&middot;</span><span>1.5</span>
+            <span class="dot">&middot;</span><span>-2%</span>
+          </div>
+        </div>
+
+        <div class="type-specimen">
+          <h3 class="type-h3">Last Solds</h3>
+          <div class="type-meta">
+            <span>Card Title / H3</span>
+            <span class="dot">&middot;</span><span>Figtree</span>
+            <span class="dot">&middot;</span><span>900</span>
+            <span class="dot">&middot;</span><span>20px</span>
+            <span class="dot">&middot;</span><span>1.5</span>
+            <span class="dot">&middot;</span><span>-2%</span>
+          </div>
+        </div>
+
+        <div class="type-specimen">
+          <p class="type-bigger-body-bold">Account</p>
+          <div class="type-meta">
+            <span>Bigger Body Bold</span>
+            <span class="dot">&middot;</span><span>Figtree</span>
+            <span class="dot">&middot;</span><span>900</span>
+            <span class="dot">&middot;</span><span>16px</span>
+            <span class="dot">&middot;</span><span>1.5</span>
+            <span class="dot">&middot;</span><span>-2%</span>
+          </div>
+        </div>
+
+        <div class="type-specimen">
+          <p class="type-thinner-bigger-body">Username</p>
+          <div class="type-meta">
+            <span>Thinner Bigger Body Bold</span>
+            <span class="dot">&middot;</span><span>Figtree</span>
+            <span class="dot">&middot;</span><span>700</span>
+            <span class="dot">&middot;</span><span>16px</span>
+            <span class="dot">&middot;</span><span>1.5</span>
+            <span class="dot">&middot;</span><span>normal</span>
+          </div>
+        </div>
+
+        <div class="type-specimen">
+          <p class="type-body-bold">Body Bold — Subtitles, list row content, dropdown labels, detail key-value pairs.</p>
+          <div class="type-meta">
+            <span>Body Bold</span>
+            <span class="dot">&middot;</span><span>Figtree</span>
+            <span class="dot">&middot;</span><span>700</span>
+            <span class="dot">&middot;</span><span>14px</span>
+            <span class="dot">&middot;</span><span>1.5</span>
+            <span class="dot">&middot;</span><span>normal</span>
+          </div>
+        </div>
+
+        <div class="type-specimen">
+          <p class="type-subtext-bold">Active filter</p>
+          <div class="type-meta">
+            <span>Subtext Bold</span>
+            <span class="dot">&middot;</span><span>Figtree</span>
+            <span class="dot">&middot;</span><span>900</span>
+            <span class="dot">&middot;</span><span>12px</span>
+            <span class="dot">&middot;</span><span>1.5</span>
+            <span class="dot">&middot;</span><span>-2%</span>
+          </div>
+        </div>
+
+        <div class="type-specimen">
+          <p class="type-subtext">2 hours ago &middot; PSA 10 &middot; 1st Edition</p>
+          <div class="type-meta">
+            <span>Subtext</span>
+            <span class="dot">&middot;</span><span>Figtree</span>
+            <span class="dot">&middot;</span><span>700</span>
+            <span class="dot">&middot;</span><span>12px</span>
+            <span class="dot">&middot;</span><span>1.5</span>
+            <span class="dot">&middot;</span><span>normal</span>
+          </div>
+        </div>
+
+        <div class="type-specimen">
+          <p class="type-subsubtext">99+</p>
+          <div class="type-meta">
+            <span>Subsubtext</span>
+            <span class="dot">&middot;</span><span>Figtree</span>
+            <span class="dot">&middot;</span><span>800</span>
+            <span class="dot">&middot;</span><span>10px</span>
+            <span class="dot">&middot;</span><span>1.5</span>
+            <span class="dot">&middot;</span><span>normal</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Buttons -->
+    <section id="buttons" class="section">
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <span class="section-divider">|</span>
+        <span class="section-label">Buttons</span>
+      </div>
+      <h2 class="section-title">Button Variants</h2>
+
+      <div class="button-showcase">
+        <div class="button-item">
+          <button class="btn btn-primary btn-full">Grade a card</button>
+          <span class="button-label">Primary CTA</span>
+        </div>
+        <div class="button-item">
+          <button class="btn btn-secondary btn-full">Continue with Email</button>
+          <span class="button-label">Secondary CTA</span>
+        </div>
+        <div class="button-item">
+          <button class="btn btn-accent btn-full">Grade a card</button>
+          <span class="button-label">Accent CTA (Floating)</span>
+        </div>
+        <div class="button-item">
+          <button class="btn btn-small-inline">+ New list</button>
+          <span class="button-label">Small Inline</span>
+        </div>
+        <div class="button-item">
+          <button class="btn btn-icon" aria-label="Close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
+          <span class="button-label">Icon Button</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cards -->
+    <section id="cards" class="section">
+      <div class="section-header">
+        <span class="section-number">04</span>
+        <span class="section-divider">|</span>
+        <span class="section-label">Cards</span>
+      </div>
+      <h2 class="section-title">Card Examples</h2>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-dot" style="background:#44b200"></div>
+            <span class="card-badge">Collection</span>
+          </div>
+          <h3 class="card-title">Vintage Holos</h3>
+          <p class="card-desc">23 cards &middot; $1,247 estimated value. Last updated 2 hours ago.</p>
+          <div class="card-nested">
+            <div class="card-nested-row">
+              <span class="card-nested-label">Top card</span>
+              <span class="card-nested-dots"></span>
+              <span class="card-nested-value">Charizard 1st Ed.</span>
+            </div>
+            <div class="card-nested-row">
+              <span class="card-nested-label">Avg grade</span>
+              <span class="card-nested-dots"></span>
+              <span class="card-nested-value">PSA 8.5</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-dot" style="background:#7928ca"></div>
+            <span class="card-badge">Grading</span>
+          </div>
+          <h3 class="card-title">Grade Queue</h3>
+          <p class="card-desc">5 cards pending review. AI confidence averaging 94%.</p>
+          <div class="card-nested">
+            <div class="card-nested-row">
+              <span class="card-nested-label">Status</span>
+              <span class="card-nested-dots"></span>
+              <span class="card-nested-value type-profit">Processing</span>
+            </div>
+            <div class="card-nested-row">
+              <span class="card-nested-label">ETA</span>
+              <span class="card-nested-dots"></span>
+              <span class="card-nested-value">~3 minutes</span>
+            </div>
+          </div>
+        </div>
+        <div class="card card-colored" style="background:#ff381a">
+          <h3 class="card-title" style="color:#fff">Upgrade to Pro</h3>
+          <p class="card-desc" style="color:rgba(255,255,255,0.85)">Unlimited grading, portfolio tracking, and price alerts. Join 12,000+ collectors.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter Pills -->
+    <section id="pills" class="section">
+      <div class="section-header">
+        <span class="section-number">04b</span>
+        <span class="section-divider">|</span>
+        <span class="section-label">Pills</span>
+      </div>
+      <h2 class="section-title">Filter Pills</h2>
+
+      <div class="pill-showcase">
+        <div class="pill-row">
+          <button class="pill pill-active">All Cards</button>
+          <button class="pill">Pokemon</button>
+          <button class="pill">Yu-Gi-Oh</button>
+          <button class="pill">Sports</button>
+          <button class="pill">Graded</button>
+          <button class="pill">Raw</button>
+        </div>
+        <div class="pill-meta">
+          <span>12px radius &middot; Never circular &middot; Active inverts to dark bg</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Forms -->
+    <section id="forms" class="section">
+      <div class="section-header">
+        <span class="section-number">05</span>
+        <span class="section-divider">|</span>
+        <span class="section-label">Forms</span>
+      </div>
+      <h2 class="section-title">Form Elements</h2>
+
+      <div class="form-showcase">
+        <div class="form-group">
+          <label class="form-label">Display Name</label>
+          <input type="text" class="form-input" placeholder="pokefan99" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Collection Name</label>
+          <input type="text" class="form-input" value="Vintage Holos" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input type="text" class="form-input form-input-error" value="not-an-email" />
+          <span class="form-error">Please enter a valid email</span>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Search Cards</label>
+          <div class="form-search">
+            <span class="form-search-tag">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+              PSA 10
+            </span>
+            <input type="text" class="form-input form-search-input" placeholder="Add filter..." />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detail Rows -->
+    <section id="detail-rows" class="section">
+      <div class="section-header">
+        <span class="section-number">05b</span>
+        <span class="section-divider">|</span>
+        <span class="section-label">Detail Rows</span>
+      </div>
+      <h2 class="section-title">Detail Rows</h2>
+
+      <div class="detail-rows-showcase">
+        <div class="detail-row">
+          <span class="detail-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9 12h6M12 9v6"/></svg>
+            Grade
+          </span>
+          <span class="detail-dots"></span>
+          <span class="detail-value">PSA 10</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 100 7h5a3.5 3.5 0 110 7H6"/></svg>
+            Est. Value
+          </span>
+          <span class="detail-dots"></span>
+          <span class="detail-value type-profit">$1,247.00</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            24h Change
+          </span>
+          <span class="detail-dots"></span>
+          <span class="detail-value type-loss">-$23.50</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="4"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            Listed
+          </span>
+          <span class="detail-dots"></span>
+          <span class="detail-value-pill">View on eBay</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Spacing -->
+    <section id="spacing" class="section">
+      <div class="section-header">
+        <span class="section-number">06</span>
+        <span class="section-divider">|</span>
+        <span class="section-label">Spacing</span>
+      </div>
+      <h2 class="section-title">Spacing Scale</h2>
+
+      <div class="spacing-scale">
+        <div class="spacing-item"><div class="spacing-bar" style="height:0px"></div><span class="spacing-label">0</span></div>
+        <div class="spacing-item"><div class="spacing-bar" style="height:2px"></div><span class="spacing-label">2</span></div>
+        <div class="spacing-item"><div class="spacing-bar" style="height:4px"></div><span class="spacing-label">4</span></div>
+        <div class="spacing-item"><div class="spacing-bar" style="height:6px"></div><span class="spacing-label">6</span></div>
+        <div class="spacing-item"><div class="spacing-bar" style="height:8px"></div><span class="spacing-label">8</span></div>
+        <div class="spacing-item"><div class="spacing-bar" style="height:12px"></div><span class="spacing-label">12</span></div>
+        <div class="spacing-item"><div class="spacing-bar" style="height:16px"></div><span class="spacing-label">16</span></div>
+        <div class="spacing-item"><div class="spacing-bar" style="height:24px"></div><span class="spacing-label">24</span></div>
+        <div class="spacing-item"><div class="spacing-bar" style="height:32px"></div><span class="spacing-label">32</span></div>
+        <div class="spacing-item"><div class="spacing-bar" style="height:48px"></div><span class="spacing-label">48</span></div>
+      </div>
+
+      <div class="spacing-rhythm">
+        <h3 class="spacing-rhythm-title">Three-Tier Rhythm</h3>
+        <div class="spacing-rhythm-grid">
+          <div class="spacing-rhythm-item">
+            <div class="spacing-rhythm-bar" style="width:6px"></div>
+            <div class="spacing-rhythm-info">
+              <span class="spacing-rhythm-value">6px</span>
+              <span class="spacing-rhythm-role">Tight — siblings within a component</span>
+            </div>
+          </div>
+          <div class="spacing-rhythm-item">
+            <div class="spacing-rhythm-bar" style="width:12px"></div>
+            <div class="spacing-rhythm-info">
+              <span class="spacing-rhythm-value">12px</span>
+              <span class="spacing-rhythm-role">Standard — elements within a section</span>
+            </div>
+          </div>
+          <div class="spacing-rhythm-item">
+            <div class="spacing-rhythm-bar" style="width:24px"></div>
+            <div class="spacing-rhythm-info">
+              <span class="spacing-rhythm-value">24px</span>
+              <span class="spacing-rhythm-role">Section — separating major sections</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Border Radius -->
+    <section id="radius" class="section">
+      <div class="section-header">
+        <span class="section-number">07</span>
+        <span class="section-divider">|</span>
+        <span class="section-label">Radii</span>
+      </div>
+      <h2 class="section-title">Corner Radius Scale</h2>
+
+      <div class="radius-scale">
+        <div class="radius-item">
+          <div class="radius-swatch" style="border-radius:12px"></div>
+          <span class="radius-label">Small</span>
+          <span class="radius-value">12px</span>
+          <span class="radius-use">Buttons, pills, tags, inputs</span>
+        </div>
+        <div class="radius-item">
+          <div class="radius-swatch" style="border-radius:24px"></div>
+          <span class="radius-label">Medium</span>
+          <span class="radius-value">24px</span>
+          <span class="radius-use">Cards, large CTAs, containers</span>
+        </div>
+        <div class="radius-item">
+          <div class="radius-swatch" style="border-radius:32px"></div>
+          <span class="radius-label">Large</span>
+          <span class="radius-value">32px</span>
+          <span class="radius-use">Rare — very large containers</span>
+        </div>
+      </div>
+
+      <div class="radius-warning">
+        <span class="radius-warning-icon">&#10005;</span>
+        <span>No pills (9999px) or circles (50%) — the entire system is rectangular</span>
+      </div>
+    </section>
+
+    <!-- Elevation -->
+    <section id="elevation" class="section">
+      <div class="section-header">
+        <span class="section-number">08</span>
+        <span class="section-divider">|</span>
+        <span class="section-label">Elevation</span>
+      </div>
+      <h2 class="section-title">Elevation &amp; Depth</h2>
+
+      <div class="elevation-mode-label">Light Mode — Shadow is elevation</div>
+      <div class="elevation-grid">
+        <div class="elevation-item">
+          <div class="elevation-card elevation-flat">
+            <span class="elevation-name">Level 0: Flat</span>
+            <span class="elevation-detail">No shadow, no border</span>
+          </div>
+        </div>
+        <div class="elevation-item">
+          <div class="elevation-card elevation-ui">
+            <span class="elevation-name">Level 1: UI Card</span>
+            <span class="elevation-detail">Shadow only, no border</span>
+          </div>
+        </div>
+        <div class="elevation-item">
+          <div class="elevation-card elevation-nested">
+            <span class="elevation-name">Level 1b: Nested</span>
+            <span class="elevation-detail">Subtle border, same bg</span>
+          </div>
+        </div>
+        <div class="elevation-item">
+          <div class="elevation-card elevation-physical">
+            <span class="elevation-name">Physical Card</span>
+            <span class="elevation-detail">Trading card shadow only</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="elevation-mode-label">Dark Mode — Border is elevation</div>
+      <div class="elevation-grid elevation-grid-dark">
+        <div class="elevation-item">
+          <div class="elevation-card elevation-dark-flat">
+            <span class="elevation-name" style="color:#fafafa">Level 0: Flat</span>
+            <span class="elevation-detail" style="color:#b3afb6">No shadow, no border</span>
+          </div>
+        </div>
+        <div class="elevation-item">
+          <div class="elevation-card elevation-dark-ui">
+            <span class="elevation-name" style="color:#fafafa">Level 1: UI Card</span>
+            <span class="elevation-detail" style="color:#b3afb6">Border only, no shadow</span>
+          </div>
+        </div>
+        <div class="elevation-item">
+          <div class="elevation-card elevation-dark-nested">
+            <span class="elevation-name" style="color:#fafafa">Level 1b: Nested</span>
+            <span class="elevation-detail" style="color:#b3afb6">Subtle border, same bg</span>
+          </div>
+        </div>
+        <div class="elevation-item">
+          <div class="elevation-card elevation-colored">
+            <span class="elevation-name" style="color:#fff">Colored Card</span>
+            <span class="elevation-detail" style="color:rgba(255,255,255,0.7)">3px border overlay</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Iconography -->
+    <section id="icons" class="section">
+      <div class="section-header">
+        <span class="section-number">09</span>
+        <span class="section-divider">|</span>
+        <span class="section-label">Icons</span>
+      </div>
+      <h2 class="section-title">Iconography</h2>
+
+      <div class="icon-scale">
+        <div class="icon-item">
+          <div class="icon-demo">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+          </div>
+          <span class="icon-size">12px</span>
+          <span class="icon-stroke">stroke: 2px</span>
+          <span class="icon-use">Inline indicators</span>
+        </div>
+        <div class="icon-item">
+          <div class="icon-demo">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <span class="icon-size">16px</span>
+          <span class="icon-stroke">stroke: 2px</span>
+          <span class="icon-use">Detail row icons</span>
+        </div>
+        <div class="icon-item">
+          <div class="icon-demo">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M3 12h18M12 3v18"/></svg>
+          </div>
+          <span class="icon-size">18px</span>
+          <span class="icon-stroke">stroke: 3px</span>
+          <span class="icon-use">Standard UI icons</span>
+        </div>
+        <div class="icon-item">
+          <div class="icon-demo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+          </div>
+          <span class="icon-size">24px</span>
+          <span class="icon-stroke">stroke: 3px</span>
+          <span class="icon-use">Tab bar, primary actions</span>
+        </div>
+        <div class="icon-item">
+          <div class="icon-demo">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <span class="icon-size">32px</span>
+          <span class="icon-stroke">stroke: 4px</span>
+          <span class="icon-use">Hero / feature icons</span>
+        </div>
+      </div>
+
+      <div class="icon-rule">
+        <span class="icon-rule-label">Hugeicons &middot; stroke style only &middot; never filled &middot; size &amp; stroke width are coupled</span>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Made with Evo <svg width="14" height="14" viewBox="0 0 32 32" fill="#ff381a" style="vertical-align:-2px"><rect width="32" height="32" rx="8"/><path d="M8 22V10h4.5c1.2 0 2.1.3 2.7.9.6.6.9 1.3.9 2.2 0 .6-.2 1.1-.5 1.6-.3.4-.8.7-1.4.9l2.2 6.4h-2.8l-1.8-5.8H10.6V22H8zm2.6-7.8h1.6c.5 0 .9-.1 1.2-.4.3-.3.4-.6.4-1s-.1-.7-.4-1c-.3-.2-.7-.4-1.2-.4h-1.6v2.8zM19 22V10h7v2.2h-4.4v2.8h3.8v2.2h-3.8v2.6H26V22h-7z" fill="white"/></svg> Critiqued Freely</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
